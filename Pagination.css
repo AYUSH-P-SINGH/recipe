@@ -1,0 +1,159 @@
+/* Pagination styles - Updated theme */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 40px 0;
+  padding: 20px;
+}
+
+.pagination-btn {
+  background: #2c3e50;
+  color: white;
+  border: 2px solid #2c3e50;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.pagination.dark .pagination-btn {
+  background: #444;
+  border-color: #444;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #34495e;
+  border-color: #34495e;
+}
+
+.pagination.dark .pagination-btn:hover:not(:disabled) {
+  background: #555;
+  border-color: #555;
+}
+
+.pagination-btn:disabled {
+  background: #bdc3c7;
+  border-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.pagination.dark .pagination-btn:disabled {
+  background: #444;
+  border-color: #444;
+  opacity: 0.5;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.page-number {
+  background: white;
+  color: #2c3e50;
+  border: 2px solid #e0e0e0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  min-width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.pagination.dark .page-number {
+  background: #1a1a1a;
+  color: white;
+  border-color: #333;
+}
+
+.page-number:hover {
+  background: #f8f9fa;
+  border-color: #2c3e50;
+}
+
+.pagination.dark .page-number:hover {
+  background: #2a2a2a;
+  border-color: #555;
+}
+
+.page-number.active {
+  background: #2c3e50;
+  color: white;
+  border-color: #2c3e50;
+}
+
+.pagination.dark .page-number.active {
+  background: #444;
+  border-color: #444;
+}
+
+.page-ellipsis {
+  color: #7f8c8d;
+  font-weight: 600;
+  padding: 0 10px;
+  font-size: 1.1rem;
+}
+
+.pagination.dark .page-ellipsis {
+  color: #999;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .pagination {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 30px 0;
+    padding: 15px;
+  }
+  
+  .pagination-btn {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+    min-width: 80px;
+  }
+  
+  .page-number {
+    min-width: 40px;
+    height: 40px;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    gap: 5px;
+    margin: 20px 0;
+    padding: 10px;
+  }
+  
+  .pagination-btn {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    min-width: 70px;
+  }
+  
+  .page-number {
+    min-width: 35px;
+    height: 35px;
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+  
+  .page-ellipsis {
+    font-size: 1rem;
+    padding: 0 5px;
+  }
+}
